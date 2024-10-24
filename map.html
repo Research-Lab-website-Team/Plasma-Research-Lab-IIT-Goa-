@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="NavbarFooter.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Additional styles for the map */
+        #map {
+            height: 600px; /* Height of the map */
+            width: 100%; /* Full width */
+            max-width: 1100px; /* Max width for larger screens */
+            margin: 0 auto; /* Center the map */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-logo">
+            <img src="iitgoalogo1.png" alt="IIT Goa Logo">
+            <span>PLASMA RESEARCH LAB</span>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li class="dropdown">
+                    <a href="#" id="members-toggle">Members</a>
+                    <ul class="dropdown-content" id="members-dropdown">
+                        <li><a href="facultyANDstudents.html">Faculty</a></li>
+                        <li>
+                            <a href="#" class="students" id="students-toggle">Students</a>
+                            <ul class="dropdown-submenu" id="students-dropdown">
+                                <li><a href="facultyANDstudents.html">Ph.D. Students</a></li>
+                                <li><a href="facultyANDstudents.html">M.Tech Students</a></li>
+                                <li><a href="facultyANDstudents.html">JRF</a></li>
+                                <li><a href="facultyANDstudents.html">B.Tech Students</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Research</a>
+                    <ul class="dropdown-content">
+                        <li><a href="research.html">Projects</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                    </ul>
+                </li>
+                <li><a href="ResearchTalks.html">Presentations and Invited Talks</a></li>
+                <li><a href="Facilities.html">Facilities</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="map.html" class="active">Map</a></li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+
+    <h1>MAP</h1>
+    <div id="map"></div>
+
+    <br><br><footer id="footer">
+        <div class="footer-section">
+            <div class="footer-column">
+                <h3>GET IN TOUCH</h3>
+                <p>Plasma Research Lab<br>PG block, GEC Campus<br>Indian Institute Of Technology Goa<br>Ponda-403404</p>
+            </div>
+            <div class="footer-column">
+                <h3>LAB RULES</h3>
+                <ul>
+                    <li><a href="#">1. Rule 1</a></li>
+                    <li><a href="#">2. Rule 2</a></li>
+                    <li><a href="#">3. Rule 3</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>CONTACT</h3>
+                <ul>
+                    <li><a href="#">Email: shakthi@iitgoa.ac.in</a></li>
+                    <li><a href="#">Ph: 8861663357</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>OPENING HOURS</h3>
+                <p>Mon - Fri: 8am - 5pm<br>Saturday: 9am - 7pm<br>Sunday: Closed</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2024 Aditi Jindal and Sanskriti Pal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([15.423208289280781, 73.97860219467258], 15);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add a marker
+        const marker = L.marker([15.423208289280781, 73.97860219467258]).addTo(map)
+            .bindPopup('Plasma Research Lab')
+            .openPopup();
+
+        // Smooth scroll to the marker on click
+        marker.on('click', function() {
+            map.setView(marker.getLatLng(), 15, {animate: true}); // Adjust zoom level as needed
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Projects</title>
+    <link rel="stylesheet" href="researchCSS.css">
+    <link rel = "stylesheet" href="NavbarFooter.css">
+</head>
+
+    <header>
+        <div class="navbar-logo">
+            <img src="iitgoalogo1.png" alt="IIT Goa Logo">
+            <span>PLASMA RESEARCH LAB</span>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul class="navbar-menu">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                
+                <!-- Group Members with Dropdown -->
+                <li class="dropdown">
+                    <a href="#" id="members-toggle">Members</a>
+                    <ul class="dropdown-content" id="members-dropdown">
+                        <li><a href="facultyANDstudents.html">Faculty</a></li>
+                        <li>
+                            <a href="#" class="students" id="students-toggle">Students</a>
+                            <ul class="dropdown-submenu" id="students-dropdown">
+                                <li><a href="facultyANDstudents.html">Ph.D. Students</a></li>
+                                <li><a href="facultyANDstudents.html">M.Tech Students</a></li>
+                                <li><a href="facultyANDstudents.html">JRF</a></li>
+                                <li><a href="facultyANDstudents.html">B.Tech Students</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+                <!-- Research Dropdown -->
+                <li class="dropdown">
+                    <a href="#"  class="active">Research</a>
+                    <ul class="dropdown-content">
+                        <li><a href="research.html"  class="active">Projects</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                    </ul>
+                </li>
+                <li><a href="ResearchTalks.html">Presentations and Invited Talks</a></li>
+                <li><a href="Facilities.html">Facilities</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="map.html">Map</a></li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+
+    
+
+    
+
+    <!-- Ongoing Projects Section -->
+    <section class="projects-section">
+        <h1 id="ongoing-projects">Ongoing Projects</h1>
+        <div class="projects-container ongoing-projects">
+            <!-- Cards for ongoing projects -->
+            <div class="card">
+                <p><strong>Development of Superhydrophobic polymer insulators for Indian Powergrid</strong></p>
+                <p>Funded by: CPRI Bangalore through Ministry of Power</p>
+                <p>Grant amount: 45.38 Lakhs</p>
+            </div>
+            <div class="card">
+                <p><strong>Computation modelling for ground potential rise</strong></p>
+                <p>Funded by: ISRO ISTRAC, Bangalore</p>
+                <p>Grant amount: 25.89 Lakhs</p>
+            </div>
+            <div class="card">
+                <p><strong>Development of Artificial rainfall facility for FSI device</strong></p>
+                <p>Funded by: Siemens India Pvt. Ltd. Goa</p>
+                <p>Grant amount: 10 Lakhs</p>
+            </div>
+            <div class="card">
+                <p><strong>Feasibility study of electromagnetic forming</strong></p>
+                <p>Funded by: Apple Inc. USA</p>
+                <p>Grant amount: 30 Lakhs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Completed Projects Section -->
+    <section class="projects-section">
+        <h1 id="completed-projects">Completed Projects</h1>
+        <div class="projects-container completed-projects">
+            <!-- Cards for completed projects -->
+            <div class="card">
+                <p><strong>Understanding Surface Charging of the Polymeric Insulators using Corona Discharges</strong></p>
+                <p>Funded by: IIT Goa</p>
+                <p>Grant amount: 5 Lakhs</p>
+            </div>
+            <div class="card">
+                <p><strong>Study of electrochemical CO2 reduction facilitated by corona discharge</strong></p>
+                <p>Funded by: IIT Goa</p>
+                <p>Grant amount: 6.4 Lakhs</p>
+            </div>
+            <div class="card">
+                <p><strong>Issues and solution to field-based voltage measurement</strong></p>
+                <p>Funded by: Siemens India Pvt. Ltd.</p>
+                <p>Grant amount: 8.3 Lakhs</p>
+            </div>
+        </div>
+    </section>
+    <footer id = "footer">
+        <div class="footer-section">
+            <div class="footer-column">
+                <h3>GET IN TOUCH</h3>
+                <p>Plasma Research Lab<br>PG block, GEC Campus<br>Indian Institute Of Technology Goa<br>Ponda-403404</p>
+            </div>
+                <div class="footer-column">
+                    <h3>LAB RULES</h3>
+                    <ul>
+                        <li><a href="#">1. Rule 1</a></li>
+                        <li><a href="#">2. Rule 2</a></li>
+                        <li><a href="#">3. Rule 3</a></li>
+                    </ul>
+                </div>
+            <div class="footer-column">
+                <h3>CONTACT</h3>
+                <ul>
+                    <li><a href="#">Email: shakthi@iitgoa.ac.in</a></li>
+                    <li><a href="#">Ph: 8861663357</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>OPENING HOURS</h3>
+                <p>Mon - Fri: 8am - 5pm<br>Saturday: 9am - 7pm<br>Sunday: Closed</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2024 Aditi Jindal and Sanskriti Pal. All rights reserved.</p>
+
+        </div>
+    </footer>
+
+    <script src="research.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* General styling for the navigation bar */
+/* Main Navbar Styling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Main content styling */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
+}
+
+.left-content h1 {
+    color: #0A2F7A;
+    font-size: 3em;
+    display: flex;
+}
+
+.right-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* About Professor Section */
+.about-professor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.professor-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #f9f9ff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.professor-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.professor-info {
+    flex: 1;
+    margin-left: 0px;
+    padding: 20px;
+}
+
+.professor-info h2 { 
+    color: #0A2F7A;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.professor-info p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.professor-info button { 
+    display: block;
+    margin: 20px auto 0 auto;
+    background-color: #0A2F7A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.professor-info button:hover {
+    background-color: #6346c4;
+}
+@media (max-width: 769px) {
+    .professor-container {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center; 
+    }
+
+    .professor-info {
+        margin-left: 0; 
+    }
+
+    .professor-info button {
+        margin-left: 0;
+    }
+    .professor-info button { 
+        display: block;
+        margin: 20px auto 0 auto;
+        background-color: #0A2F7A;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+}
+
+/* For Small Devices - Phones */
+@media (max-width: 480px) {
+    .professor-info h2 { 
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .professor-info p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .about-professor {
+        padding: 20px 10px; /* Adjust padding for small screens */
+    }
+
+    .professor-info button {
+        font-size: 0.9rem; /* Smaller button for small screens */
+        padding: 8px 16px;
+    }
+}
+/* Animation for sliding in */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px); /* Start slightly below */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Apply the animation */
+.slide-in {
+    animation: slideIn 0.5s ease forwards; /* 0.5 seconds duration */
+}
+
+.what-we-do-section {
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures the pseudo-element stays inside the container */
+}
+
+.what-we-do-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('AboutUsSection.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); /* Adjust the blur level */
+    z-index: -1; /* Place the background behind the content */
+}
+
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.content-box h2 {
+    font-size: 2rem;
+    color: #46278a;
+    margin-bottom: 20px;
+}
+
+.content-box p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+}
+h2{
+    color: #0A2F7A;
+    text-align: center;
+}
+

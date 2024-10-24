@@ -1,0 +1,197 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Faculty Section */
+.faculty-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin-left: 60px;
+    flex-wrap: wrap;
+}
+
+.faculty-info {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.faculty-photo {
+    width: 200px;
+    height: 250px;
+    margin-right: 20px;
+}
+
+.faculty-details {
+    max-width: 500px;
+}
+
+/* Plasma Image Carousel */
+.plasma-carousel {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px; 
+}
+
+.carousel-images {
+    display: flex;
+    width: 900px; /* Width is 300px * number of images */
+    animation: slide 10s infinite;
+}
+
+.plasma-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .faculty-section {
+        flex-direction: column; /* Stack items vertically */
+        margin-left: 20px; /* Adjust margin */
+    }
+
+    .faculty-info {
+        justify-content: center; /* Center the faculty info */
+        text-align: center; /* Center-align text */
+    }
+
+    .faculty-photo {
+        width: 150px;
+        height: 200px; /* Adjust the photo size */
+        margin-bottom: 20px; /* Add space below the photo */
+    }
+
+    .faculty-details {
+        max-width: 100%; /* Full width for small screens */
+        margin: 0 auto; /* Center the details */
+    }
+
+    .plasma-carousel {
+        width: 100%;
+        max-width: 300px; /* Keep carousel within bounds */
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .carousel-images {
+        width: 900px; /* Adjust based on the number of images */
+    }
+}
+
+/* For Mobile Phones */
+@media (max-width: 480px) {
+    .faculty-section {
+        padding: 10px; /* Reduce padding on smaller devices */
+        margin-left: 10px; /* Adjust margin */
+    }
+
+    .faculty-photo {
+        width: 120px;
+        height: 160px; /* Smaller image on mobile */
+    }
+
+    .faculty-details h2 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .faculty-details p {
+        font-size: 0.9rem; /* Reduce paragraph font size */
+    }
+
+    .plasma-carousel {
+        width: 100%;
+        max-width: 280px;
+        height: auto; 
+        margin: 20px auto;
+    }
+
+    .carousel-images {
+        width: 840px; /* Adjust based on image width */
+    }
+
+    .plasma-image {
+        width: 280px; /* Adjust the width */
+    }
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-300px); }
+    66% { transform: translateX(-600px); }
+    100% { transform: translateX(0); }
+}
+
+/* Students Section */
+.students-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.students-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.student-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.student-category {
+    background-color: #0A2F7A;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.student-category:hover {
+    transform: scale(1.1);
+}
+
+/* Scrollable Student Container */
+.students-container {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sub-container {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.student-info {
+    padding: 10px;
+    background-color: rgb(169, 208, 232);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.student-info:hover {
+    background-color: #8ab5cb;
+}
+
+/* Show the student details on hover */
+.student-category:hover + .students-container .sub-container {
+    display: flex;
+}

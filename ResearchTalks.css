@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #0A2F7A;
+    margin: 0;
+    padding: 0;
+}
+
+/* Services Section */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service {
+    background: #fff;
+    /* padding: 20px; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1 / 1; /* Ensure square aspect ratio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the content */
+    align-items: center; /* Horizontally centers the content */
+    text-align: center; /* Center the text */
+    height: 100%; /* Make sure it takes the full height */
+    transition: transform 0.6s ease-in-out;
+}
+
+.service h2 {
+    font-size: 30px;
+    color: #145aa5;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    
+}
+
+.service p {
+    font-size: 14px;
+    color: #555;
+    text-align: justify;
+    margin-top: 5px;
+    flex-grow: 1;
+    display: flex; /* Enable flexbox for the paragraph */
+    justify-content: center; /* Center text horizontally */
+    align-items: center;
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Allows the paragraph to grow and balance space */
+}
+
+/* Tablet Responsive (768px to 1024px) */
+@media only screen and (max-width: 1025px) and (min-width: 769px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+        gap: 20px;
+        padding: 40px; /* Adjust padding for tablet */
+    }
+
+    .service {
+        aspect-ratio: 1 / 1; /* Ensure square boxes */
+        padding: 15px;
+        justify-content: center; /* Vertically center content */
+        align-items: center; /* Horizontally center content */
+        text-align: center;
+        padding: 20px; /* Center the text */
+    }
+
+    .service h2 {
+        font-size: 30px;
+        margin-bottom: 8px;
+        padding: 20px;
+    }
+
+    .service p {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Responsive (below 768px) */
+@media only screen and (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .service {
+        aspect-ratio: 1 / 1; /* Keep square ratio on mobile */
+        padding: 15px;
+        justify-content: center; /* Vertically center content */
+        align-items: center; /* Horizontally center content */
+        text-align: center; /* Center the text */
+    }
+
+    .service h2 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        padding: 20px;
+    }
+
+    .service p {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+}
+
+/* Reveal Section */
+.reveal-section {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.6s ease-in-out;
+}
+
+.reveal-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    visibility: hidden;
+}

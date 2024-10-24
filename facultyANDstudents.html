@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty and Students</title>
+    <link rel="stylesheet" href="NavbarFooter.css">
+    <link rel="stylesheet" href="facultyANDstudents.css">
+
+</head>
+    <header>
+        <div class="navbar-logo">
+            <img src="iitgoalogo1.png" alt="IIT Goa Logo">
+            <span>PLASMA RESEARCH LAB</span>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul class="navbar-menu">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                
+                <!-- Group Members with Dropdown -->
+                <li class="dropdown">
+                    <a href="#" id="members-toggle"  class="active">Members</a>
+                    <ul class="dropdown-content" id="members-dropdown">
+                        <li><a href="facultyANDstudents.html">Faculty</a></li>
+                        <li>
+                            <a href="#" class="students" id="students-toggle">Students</a>
+                            <ul class="dropdown-submenu" id="students-dropdown">
+                                <li><a href="facultyANDstudents.html">Ph.D. Students</a></li>
+                                <li><a href="facultyANDstudents.html">M.Tech Students</a></li>
+                                <li><a href="facultyANDstudents.html">JRF</a></li>
+                                <li><a href="facultyANDstudents.html">B.Tech Students</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+                <!-- Research Dropdown -->
+                <li class="dropdown">
+                    <a href="#">Research</a>
+                    <ul class="dropdown-content">
+                        <li><a href="research.html">Projects</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                    </ul>
+                </li>
+                <li><a href="ResearchTalks.html">Presentations and Invited Talks</a></li>
+                <li><a href="Facilities.html">Facilities</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="map.html">Map</a></li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+
+<!-- Faculty Section -->
+<section class="faculty-section">
+    <div class="faculty-info">
+        <img src="Proff_Photo.png" alt="Faculty Photo" class="faculty-photo">
+        <div class="faculty-details">
+            <h2>Shakthi Prasad D.</h2>
+            <p>Professor, FNAE, FIETE, FIE</p>
+            <p><strong>Control & Guidance</strong></p>
+            <p><strong>Email:</strong> padhi[at]iisc.ac.in</p>
+            <p><strong>Office Phone Number:</strong> +91-80-22932756</p>
+            <p><strong>Lab Phone Number:</strong> +91-80-22932757</p>
+            <p><strong>Office Room Number:</strong> 139</p>
+            <p><strong>Lab Room Number:</strong> 140, 143</p>
+        </div>
+    </div>
+
+    <!-- Plasma Image Carousel -->
+    <div class="plasma-carousel">
+        <div class="carousel-images">
+            <img src="Plasma_photoTry.jpeg" alt="Plasma 1" class="plasma-image">
+            <img src="Plasma_photoTry.jpeg" alt="Plasma 2" class="plasma-image">
+            <img src="Plasma_photoTry.jpeg" alt="Plasma 3" class="plasma-image">
+            <!-- Add more images if needed -->
+        </div>
+    </div>
+</section>
+
+<!-- Students Section -->
+<section class="students-section">
+    <h2 class="students-heading">Students</h2>
+    <div class="student-options">
+        <div class="student-category phd">PhD</div>
+        <div class="student-category jrf">JRF</div>
+        <div class="student-category mtech">MTech</div>
+        <div class="student-category btech">BTech</div>
+    </div>
+
+    <!-- Scrollable Student Details -->
+    <div class="students-container">
+        <div class="sub-container phd-cont" id = "phd">
+            <div class="student-info">PhD Student 1: Details</div>
+            <div class="student-info">PhD Student 2: Details</div>
+        </div>
+        <div class="sub-container jrf-cont" id = "jrf">
+            <div class="student-info">JRF Student 1: Details</div>
+            <div class="student-info">JRF Student 2: Details</div>
+        </div>
+        <div class="sub-container mtech-cont" id ="mtech">
+            <div class="student-info">MTech Student 1: Details</div>
+            <div class="student-info">MTech Student 2: Details</div>
+        </div>
+        <div class="sub-container btech-cont" id = "btech">
+            <div class="student-info">BTech Student 1: Details</div>
+            <div class="student-info">BTech Student 2: Details</div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="footer-section">
+        <div class="footer-column">
+            <h3>GET IN TOUCH</h3>
+            <p>Plasma Research Lab<br>PG block, GEC Campus<br>Indian Institute Of Technology Goa<br>Ponda-403404</p>
+        </div>
+        <div class="footer-column">
+            <h3>LAB RULES</h3>
+            <ul>
+                <li><a href="#">1. Rule 1</a></li>
+                <li><a href="#">2. Rule 2</a></li>
+                <li><a href="#">3. Rule 3</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>CONTACT</h3>
+            <ul>
+                <li><a href="#">Email: shakthi@iitgoa.ac.in</a></li>
+                <li><a href="#">Ph: 8861663357</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>OPENING HOURS</h3>
+            <p>Mon - Fri: 8am - 5pm<br>Saturday: 9am - 7pm<br>Sunday: Closed</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2024 Aditi Jindal and Sanskriti Pal. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="fns.js"></script>
+</body>
+</html>
