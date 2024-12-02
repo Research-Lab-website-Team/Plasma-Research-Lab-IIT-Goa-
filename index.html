@@ -4,35 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plasma Research Lab</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="facultyANDstudents.css">
     <link rel="stylesheet" href="NavbarFooter.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="navbar-logo">
-            <img src="iit-goa-logo-only-transparent-rwd.png" alt="IIT Goa Logo">
-            <span>PLASMA RESEARCH LAB</span>
+            <img src="iitGOALOGO.png" alt="IIT Goa Logo">
+            <span>INDIAN INSTITUTE OF TECHNOLOGY GOA <br> School of Electrical Sciences</span>
         </div>
         <input type="checkbox" id="nav_check" hidden>
         <nav>
             <ul class="navbar-menu">
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                
+                <li><a href="#">FACULTY</a></li>
                 <!-- Group Members with Dropdown -->
                 <li class="dropdown">
-                    <a href="#" id="members-toggle">Members</a>
-                    <ul class="dropdown-content" id="members-dropdown">
-                        <li><a href="facultyANDstudents.html">Faculty</a></li>
-                        <li>
-                            <a href="#" class="students" id="students-toggle">Students</a>
-                            <ul class="dropdown-submenu" id="students-dropdown">
-                                <li><a href="facultyANDstudents.html">Ph.D. Students</a></li>
-                                <li><a href="facultyANDstudents.html">M.Tech Students</a></li>
-                                <li><a href="facultyANDstudents.html">JRF</a></li>
-                                <li><a href="facultyANDstudents.html">B.Tech Students</a></li>
-                            </ul>
-                        </li>
+                    <a href="#">MEMBERS</a>
+                    <ul class="dropdown-content">
+                        <li><a href="facultyANDstudents.html">Ph.D. Students</a></li>
+                        <li><a href="facultyANDstudents.html">M.Tech Students</a></li>
+                        <li><a href="facultyANDstudents.html">JRF</a></li>
+                        <li><a href="facultyANDstudents.html">B.Tech Students</a></li>
                     </ul>
                 </li>
                 
@@ -42,12 +36,17 @@
                     <ul class="dropdown-content">
                         <li><a href="research.html">Projects</a></li>
                         <li><a href="publications.html">Publications</a></li>
+                        <li><a href="ResearchTalks.html">Presentations and Invited Talks</a></li>
                     </ul>
                 </li>
-                <li><a href="ResearchTalks.html">Presentations and Invited Talks</a></li>
+                
                 <li><a href="Facilities.html">Facilities</a></li>
-                <li><a href="#footer">Contact</a></li>
-                <li><a href="map.html">Map</a></li>
+                <li class="dropdown">
+                    <a href="#">CONTACT</a>
+                    <ul class="dropdown-content">
+                        <li><a href="map.html">map</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <label for="nav_check" class="hamburger">
@@ -61,31 +60,22 @@
     <div class="main-content">
         <!-- Left text content -->
         <div class="left-content">
-            <h1>Changing the Way the World Does Business</h1>
+            <h1>Plasma Research and High Voltage Laboratory</h1>
             <p>Building Lasting Relationships</p>
         </div>
-
-        <!-- Right image content -->
-        <div class="right-content">
-            <img src="lab_mainPage.jpg" alt="Lab Image">
-        </div>
     </div>
 
-    <!-- About Professor Section -->
-    <div class="about-professor">
-        <div class="professor-container">
-            <!-- Left Image -->
-            <div class="professor-image">
-                <img src="Proff_Photo.png" alt="Prof. Name">
-            </div>
-            <!-- Right Text Content -->
-            <div class="professor-info slide-in">
-                <h2>About Prof. Name</h2>
-                <p>This is the space to introduce visitors to the business or brand. Briefly explain who's behind it, what it does and what makes it unique. Share its core values and what this site has to offer.</p>
-                <center><a href="facultyANDstudents.html"><button >More details</button></a>
-            </div>
+    <!-- Plasma Image Carousel -->
+    <div class="plasma-carousel">
+        <div class="carousel-images" id="carousel-images">
+            <img src="plasma.jpg" alt="Plasma 1" class="plasma-image">
+            <img src="plasma.jpg" alt="Plasma 2" class="plasma-image">
+            <img src="plasma.jpg" alt="Plasma 3" class="plasma-image">
+            <!-- Add more images if needed -->
         </div>
-    </div>
+    </div><br><br><br<br> <br<br><br><br><br<br><br><br><br<br>
+
+     
 
     <!-- What do we do Section -->
     <section class="what-we-do-section" id="about">
@@ -95,39 +85,93 @@
         </div>
     </section><br><br>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="footer-section">
-            <div class="footer-column">
-                <h3>GET IN TOUCH</h3>
-                <p>Plasma Research Lab<br>PG block, GEC Campus<br>Indian Institute Of Technology Goa<br>Ponda-403404</p>
-            </div>
-            <div class="footer-column">
-                <h3>LAB RULES</h3>
-                <ul>
-                    <li><a href="#">1. Rule 1</a></li>
-                    <li><a href="#">2. Rule 2</a></li>
-                    <li><a href="#">3. Rule 3</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>CONTACT</h3>
-                <ul>
-                    <li><a href="#">Email: shakthi@iitgoa.ac.in</a></li>
-                    <li><a href="#">Ph: 8861663357</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>OPENING HOURS</h3>
-                <p>Mon - Fri: 8am - 5pm<br>Saturday: 9am - 7pm<br>Sunday: Closed</p>
+    <div class="container">
+    <div class="box">
+            <h2 class="Box-open">Latest Publications</h2>
+            <div class="scroll-content" id="publications">
+                <a href="#">Publication 1</a>
+                <a href="#">Publication 2</a>
+                <a href="#">Publication 3</a>
+                <a href="#">Publication 4</a>
+                <a href="#">Publication 5</a>
+                <a href="#">Publication 6</a>
+                <a href="#">Publication 7</a>
+                <a href="#">Publication 8</a>
+                <a href="#">Publication 9</a>
+                <a href="#">Publication 10</a>
+                <a href="#">Publication 11</a>
+                <a href="#">Publication 12</a>
+                <a href="#">Publication 13</a>
             </div>
         </div>
+
+        <!-- Projects Box -->
+        <div class="box">
+            <h2 class="Box-open">On-going Projects</h2>
+            <div class="scroll-content" id="projects">
+                <a href="#">Project 1</a>
+                <a href="#">Project 2</a>
+                <a href="#">Project 3</a>
+                <a href="#">Project 4</a>
+                <a href="#">Project 5</a>
+                <a href="#">Project 6</a>
+                <a href="#">Project 7</a>
+                <a href="#">Project 8</a>
+                <a href="#">Project 9</a>
+                <a href="#">Project 10</a>
+                <a href="#">Project 11</a>
+            </div>
+        </div>
+
+        <!-- Recent Openings Box -->
+        <div class="box">
+            <h2 class="Box-open">Recent Openings</h2>
+            <div class="scroll-content" id="openings">
+                <a href="#">Opening 1</a>
+                <a href="#">Opening 2</a>
+                <a href="#">Opening 3</a>
+                <a href="#">Opening 4</a>
+                <a href="#">Opening 5</a>
+                <a href="#">Opening 6</a>
+                <a href="#">Opening 7</a>
+                <a href="#">Opening 8</a>
+                <a href="#">Opening 9</a>
+                <a href="#">Opening 10</a>
+                <a href="#">Opening 11</a>
+                <a href="#">Opening 12</a>
+                <a href="#">Opening 13</a>
+                <a href="#">Opening 14</a>
+            </div>
+        </div>
+    </div><br><br>
+   
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>ADDRESS</h3>
+                <p>PG Block behind Academic Block <br>
+                    Indian Institute of Technology<br>
+                    Ponda Goa – 403401</p>
+            </div>
+            <div class="footer-logo">
+                <img src="iitGOALOGO.png" alt="Institute Logo">
+            </div>
+            <div class="footer-contact">
+                <p><b>CONTACT</b></p>
+                <p><i class="fa fa-phone"></i>PHONE :  +91 80 22932417</p>
+                <p><i class="fa fa-envelope"></i> <a href="mailto:office.aero@iisc.ac.in">E-MAIL : shakthi@iitgoa.ac.in</a></p>
+                
+            </div>
+        </div>
+        <hr>
         <div class="footer-bottom">
-            <p>Copyright &copy; 2024 Aditi Jindal and Sanskriti Pal. All rights reserved.</p>
+            <p>Copyright &copy; 2024 Aditi Jindal and Sanskriti Pal. All rights reserved.</a></p>
         </div>
     </footer>
 
+
     <script src="script.js"></script>
+    <script src="NavbarFooter.js"></script>
+    <script src="fns.js"></script>
 </body>
 </html>
