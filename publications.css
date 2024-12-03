@@ -1,67 +1,108 @@
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 200vh;
+    height: 200vh; /* Extend height for testing scrolling */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    background-color:#f4f4f4 ;
+    /* align-items: center; */
+    background-color: #f4f4f4;
 }
 
+/* Content Headers */
 .content {
     margin: 50px 0;
-    text-align: center;
+    text-align: left;
     color: #0A2F7A;
     font-family: 'Playfair Display', serif;
 }
 
+.spanclass{
+    font-weight: bold;
+}
+
+/* Reveal Section Styling */
 .reveal-section {
     background-color: white;
     padding: 20px;
     margin: 20px 0;
-    margin-left: 50px;
     width: 80%;
     max-width: 800px;
-    text-align: center;
+    text-align: left;
     border-radius: 8px;
     opacity: 0;
-    transform: translateY(100px);
-    transition: all 0.6s ease-in-out;
+    visibility: hidden; /* Initially hidden */
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out; /* Smooth animation */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.content h2{
+    align-items: left;
+    justify-content: left;
+    padding-left: 120px;
 }
 
 .reveal-section.show {
     opacity: 1;
-    transform: translateY(0);
+    visibility: visible;
+    transform: translateY(0); /* Slide into view */
 }
 
-.hidden {
-    visibility: hidden;
-}
-.services-container {
+/* Publications Container */
+.publications-container {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    margin: 50px 0; /* Adjust margin as needed */
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between sections */
+    margin: 20px;
+    overflow: hidden; /* Prevent unnecessary scrollbars */
+    justify-content: flex-start;
+    justify-items: flex-start;
 }
 
+/* Journals and Conferences Sections */
+.journals, .conferences {
+    flex: 1; /* Both sections take equal space */
+    max-width: 48%; /* Adjust width for spacing */
+    height: 70vh; /* Define height for scrollable content */
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-right: auto;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .publications-container {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .journals, .conferences {
+        max-width: 100%; /* Full width */
+        height: 50vh; /* Reduced height for better stacking */
+        margin-right: 0;
+    }
+}
+
+/* Service Box Styling */
 .service {
     background-color: white;
     padding: 20px;
     margin: 20px 0;
-    width: 80%; /* Width for larger screens */
-    max-width: 800px; /* Maximum width */
-    text-align: center; /* Center text inside the service box */
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries for Service Boxes */
 @media (max-width: 768px) {
     .service {
         width: 90%; /* Adjust width for smaller screens */
     }
 }
-
