@@ -1,6 +1,6 @@
-function isElementInViewport(el, container) {
+function isElementInViewport(el, container = null) {
     const rect = el.getBoundingClientRect();
-    const containerRect = container.getBoundingClientRect();
+    const containerRect = container ? container.getBoundingClientRect() : { top: 0, bottom: window.innerHeight };
 
     return (
         rect.top <= containerRect.bottom && // Element's top is above the container's bottom
@@ -9,16 +9,14 @@ function isElementInViewport(el, container) {
 }
 
 function revealOnScroll() {
-    // Select all reveal sections
     const journalsContainer = document.querySelector('.journals');
     const conferencesContainer = document.querySelector('.conferences');
-    
+
     const revealElementsJournals = journalsContainer.querySelectorAll('.reveal-section');
     const revealElementsConferences = conferencesContainer.querySelectorAll('.reveal-section');
 
-    // Reveal items in journals container
     revealElementsJournals.forEach(el => {
-        if (isElementInViewport(el, journalsContainer)) {
+        if (isElementInViewport(el, journalsContainer) || isElementInViewport(el)) {
             el.classList.add('show');
             el.classList.remove('hidden');
         } else {
@@ -27,9 +25,8 @@ function revealOnScroll() {
         }
     });
 
-    // Reveal items in conferences container
     revealElementsConferences.forEach(el => {
-        if (isElementInViewport(el, conferencesContainer)) {
+        if (isElementInViewport(el, conferencesContainer) || isElementInViewport(el)) {
             el.classList.add('show');
             el.classList.remove('hidden');
         } else {
@@ -39,13 +36,13 @@ function revealOnScroll() {
     });
 }
 
-// Add scroll event listeners to both containers
 document.addEventListener('DOMContentLoaded', () => {
     const journalsContainer = document.querySelector('.journals');
     const conferencesContainer = document.querySelector('.conferences');
 
     journalsContainer.addEventListener('scroll', revealOnScroll);
     conferencesContainer.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('scroll', revealOnScroll); // Add global scroll listener
 
     revealOnScroll(); // Initial reveal check
 });
