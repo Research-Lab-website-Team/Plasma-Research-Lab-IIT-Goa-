@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="biography.css">
+    <link rel="stylesheet" href="NavbarFooter.css">
+</head>
+<body>
+    <header>
+        <div class="navbar-logo">
+            <img src="iitGOALOGO.png" alt="IIT Goa Logo">
+            <span>INDIAN INSTITUTE OF TECHNOLOGY GOA <br> School of Electrical Sciences</span>
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul class="navbar-menu">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="biography.html" class="active">FACULTY</a></li>
+                <!-- Group Members with Dropdown -->
+                <li class="dropdown">
+                    <a href="#">MEMBERS</a>
+                    <ul class="dropdown-content">
+                        <li><a href="facultyANDstudents.html">Ph.D. Students</a></li>
+                        <li><a href="facultyANDstudents.html">M.Tech Students</a></li>
+                        <li><a href="facultyANDstudents.html">JRF</a></li>
+                        <li><a href="facultyANDstudents.html">B.Tech Students</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Research Dropdown -->
+                <li class="dropdown">
+                    <a href="#">Research</a>
+                    <ul class="dropdown-content">
+                        <li><a href="research.html">Projects</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="ResearchTalks.html">Presentations and Invited Talks</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="Facilities.html" >Facilities</a></li>
+                <li class="dropdown">
+                    <a href="#">CONTACT</a>
+                    <ul class="dropdown-content">
+                        <li><a href="map.html">map</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <div class="container">
+        <!-- Left Section for Image -->
+        <div class="left-section">
+            <img src="Proff_Photo.png" alt="Profile Picture">
+        </div>
+
+        <!-- Right Section for Content -->
+        <div class="right-section">
+            <h1>Shakthi Prasad D.</h1>
+            <h2>Professor</h2>
+            <h3>Guidance & Control</h3>
+            <div class="contact-info">
+                <p><strong>Email:</strong> padhi@iisc.ac.in</p>
+                <p><strong>Room:</strong> 139</p>
+                <a href="#">Website</a> | <a href="#">IRINS Profile</a>
+            </div>
+            <h2>Education</h2>
+            <ul>
+                <li>Ph.D. — Missouri University of Science and Technology Rolla, USA — Aerospace Engineering — 2001</li>
+                <li>M.E. — Indian Institute of Science Bangalore — Aerospace Engineering — 1996</li>
+                <li>B.E. — VSSUT, Burla, Odisha — Mechanical Engineering — 1994</li>
+            </ul>
+            <h2>Work Experience</h2>
+            <ul>
+                <li>Professor — Indian Institute of Science, Bangalore, India — Dec 2015 to Till Date</li>
+                <li>Associate Professor — Indian Institute of Science, Bangalore, India — Dec 2009 to Dec 2015</li>
+                <li>Assistant Professor — Indian Institute of Science, Bangalore, India — Dec 2003 to Dec 2009</li>
+                <li>Postdoctoral Fellow — Missouri Univ. of Science and Technology, Rolla, MO, USA — Dec 2001 to Dec 2003</li>
+                <li>Lecturer — Missouri Univ. of Science and Technology, Rolla, MO, USA — Sep 2001 to May 2002</li>
+                <li>Scientist — Research Centre Imarat (RCI), DRDO, Hyderabad, India — Apr 1996 to July 1997</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>ADDRESS</h3>
+                <p>PG Block behind Academic Block <br>
+                    Indian Institute of Technology<br>
+                    Ponda Goa – 403401</p>
+            </div>
+            <div class="footer-logo">
+                <img src="iitGOALOGO.png" alt="Institute Logo">
+            </div>
+            <div class="footer-contact">
+                <p><b>CONTACT</b></p>
+                <p><i class="fa fa-phone"></i>PHONE :  +91 80 22932417</p>
+                <p><i class="fa fa-envelope"></i> <a href="mailto:office.aero@iisc.ac.in">E-MAIL : shakthi@iitgoa.ac.in</a></p>
+                
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2024 Aditi Jindal and Sanskriti Pal. All rights reserved.</a></p>
+        </div>
+    </footer>
+    <script src="NavbarFooter.js"></script>
+</body>
+</html>
