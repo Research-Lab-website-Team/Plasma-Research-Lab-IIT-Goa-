@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty and Students</title>
-    <link rel="stylesheet" href="NavbarFooter.css">
-    <link rel="stylesheet" href="facultyANDstudents.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="facultyANDstudents.css">
+  <link rel="stylesheet" href="NavbarFooter.css">
+  <title>Team Members</title>
+  <style>
+    /* Styling for full-width headings */
+    .full-width-heading {
+      background-color: #ffffff; /* Dark blue background */
+      color: #008EB0;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+      width: 100%;
+    }
 
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px 0;
+      
+    }
+
+    .team-member {
+      text-align: center;
+      margin: 10px;
+      width: 300px;
+    }
+
+    .team-member img {
+      width: 100%;
+      max-width: 100px;
+      height: auto;
+      border-radius: 100px;
+    }
+
+    .team-member h3 {
+      margin: 10px 0 5px;
+    }
+
+    .team-member p {
+      margin: 0 0 10px;
+    }
+  </style>
 </head>
+<body>
     <header>
         <div class="navbar-logo">
-            <img src="iit-goa-logo-only-transparent-rwd.png" alt="IIT Goa Logo">
-            <span>PLASMA RESEARCH LAB</span>
+            <img src="iitGOALOGO.png" alt="IIT Goa Logo">
+            <span>INDIAN INSTITUTE OF TECHNOLOGY GOA <br> School of Electrical Sciences</span>
         </div>
         <input type="checkbox" id="nav_check" hidden>
         <nav>
             <ul class="navbar-menu">
-                <li><a href="index.html" >Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="biography.html">FACULTY</a></li>
                 <!-- Group Members with Dropdown -->
                 <li class="dropdown">
-                    <a href="#" id="members-toggle"  class="active">Members</a>
-                    <ul class="dropdown-content" id="members-dropdown">
-                        <li><a href="facultyANDstudents.html">Faculty</a></li>
-                        <li>
-                            <a href="#" class="students" id="students-toggle">Students</a>
-                            <ul class="dropdown-submenu" id="students-dropdown">
-                                <li><a href="facultyANDstudents.html">Ph.D. Students</a></li>
-                                <li><a href="facultyANDstudents.html">M.Tech Students</a></li>
-                                <li><a href="facultyANDstudents.html">JRF</a></li>
-                                <li><a href="facultyANDstudents.html">B.Tech Students</a></li>
-                            </ul>
-                        </li>
+                    <a href="#">MEMBERS</a>
+                    <ul class="dropdown-content">
+                        <li><a href="facultyANDstudents.html">Ph.D. Students</a></li>
+                        <li><a href="facultyANDstudents.html">M.Tech Students</a></li>
+                        <li><a href="facultyANDstudents.html">JRF</a></li>
+                        <li><a href="facultyANDstudents.html">B.Tech Students</a></li>
                     </ul>
                 </li>
                 
@@ -42,12 +77,17 @@
                     <ul class="dropdown-content">
                         <li><a href="research.html">Projects</a></li>
                         <li><a href="publications.html">Publications</a></li>
+                        <li><a href="ResearchTalks.html">Presentations and Invited Talks</a></li>
                     </ul>
                 </li>
-                <li><a href="ResearchTalks.html">Presentations and Invited Talks</a></li>
+                
                 <li><a href="Facilities.html">Facilities</a></li>
-                <li><a href="#footer">Contact</a></li>
-                <li><a href="map.html">Map</a></li>
+                <li class="dropdown">
+                    <a href="#">CONTACT</a>
+                    <ul class="dropdown-content">
+                        <li><a href="map.html">map</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <label for="nav_check" class="hamburger">
@@ -57,94 +97,122 @@
         </label>
     </header>
 
-<!-- Faculty Section -->
-<section class="faculty-section">
-    <div class="faculty-info">
-        <img src="Proff_Photo.png" alt="Faculty Photo" class="faculty-photo">
-        <div class="faculty-details">
-            <h2>Shakthi Prasad D.</h2>
-            <p>Professor, FNAE, FIETE, FIE</p>
-            <p><strong>Control & Guidance</strong></p>
-            <p><strong>Email:</strong> padhi[at]iisc.ac.in</p>
-            <p><strong>Office Phone Number:</strong> +91-80-22932756</p>
-            <p><strong>Lab Phone Number:</strong> +91-80-22932757</p>
-            <p><strong>Office Room Number:</strong> 139</p>
-            <p><strong>Lab Room Number:</strong> 140, 143</p>
-        </div>
+  <main>
+    <!-- Ph.D. Students Section -->
+    <div class="full-width-heading">Ph.D. Students</div>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="shelly.jpg" alt="Ph.D. Student 1">
+        <h3>Student 1</h3>
+        <p class="role">Research Topic</p>
+        <p class="description">Brief description of the research area or contributions.</p>
+      </div>
+      <div class="team-member">
+        <img src="shelly.jpg" alt="Ph.D. Student 2">
+        <h3>Student 2</h3>
+        <p class="role">Research Topic</p>
+        <p class="description">Brief description of the research area or contributions.</p>
+      </div>
+      <div class="team-member">
+        <img src="shelly.jpg" alt="Ph.D. Student 3">
+        <h3>Student 3</h3>
+        <p class="role">Research Topic</p>
+        <p class="description">Brief description of the research area or contributions.</p>
+      </div>
     </div>
 
-    <!-- Plasma Image Carousel -->
-    <div class="plasma-carousel">
-        <div class="carousel-images">
-            <img src="Plasma_photoTry.jpeg" alt="Plasma 1" class="plasma-image">
-            <img src="Plasma_photoTry.jpeg" alt="Plasma 2" class="plasma-image">
-            <img src="Plasma_photoTry.jpeg" alt="Plasma 3" class="plasma-image">
-            <!-- Add more images if needed -->
-        </div>
+    <!-- JRF Section -->
+    <div class="full-width-heading">JRF</div>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="shelly.jpg" alt="JRF 1">
+        <h3>JRF 1</h3>
+        <p class="role">Research Assistance</p>
+        <p class="description">Description of the research support tasks handled by the JRF.</p>
+      </div>
+      <div class="team-member">
+        <img src="shelly.jpg" alt="JRF 2">
+        <h3>JRF 2</h3>
+        <p class="role">Research Assistance</p>
+        <p class="description">Description of the research support tasks handled by the JRF.</p>
+      </div>
+      <div class="team-member">
+        <img src="shelly.jpg" alt="JRF 3">
+        <h3>JRF 3</h3>
+        <p class="role">Research Assistance</p>
+        <p class="description">Description of the research support tasks handled by the JRF.</p>
+      </div>
     </div>
-</section>
 
-<!-- Students Section -->
-<section class="students-section">
-    <h2 class="students-heading">Students</h2>
-    <div class="student-options">
-        <div class="student-category phd">PhD</div>
-        <div class="student-category jrf">JRF</div>
-        <div class="student-category mtech">MTech</div>
-        <div class="student-category btech">BTech</div>
+    <!-- B.Tech Students Section -->
+    <div class="full-width-heading">B.Tech Students</div>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="shelly.jpg" alt="B.Tech Student 1">
+        <h3>Student 1</h3>
+        <p class="role">Specialization</p>
+        <p class="description">Brief description of their project or academic interests.</p>
+      </div>
+      <div class="team-member">
+        <img src="shelly.jpg" alt="B.Tech Student 2">
+        <h3>Student 2</h3>
+        <p class="role">Specialization</p>
+        <p class="description">Brief description of their project or academic interests.</p>
+      </div>
+      <div class="team-member">
+        <img src="shelly.jpg" alt="B.Tech Student 3">
+        <h3>Student 3</h3>
+        <p class="role">Specialization</p>
+        <p class="description">Brief description of their project or academic interests.</p>
+      </div>
     </div>
 
-    <!-- Scrollable Student Details -->
-    <div class="students-container">
-        <div class="sub-container phd-cont" id = "phd">
-            <div class="student-info">PhD Student 1: Details</div>
-            <div class="student-info">PhD Student 2: Details</div>
+    <!-- M.Tech Students Section -->
+    <div class="full-width-heading">M.Tech Students</div>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="shelly.jpg" alt="M.Tech Student 1">
+        <h3>Student 1</h3>
+        <p class="role">Specialization</p>
+        <p class="description">Brief description of their thesis or project work.</p>
+      </div>
+      <div class="team-member">
+        <img src="shelly.jpg" alt="M.Tech Student 2">
+        <h3>Student 2</h3>
+        <p class="role">Specialization</p>
+        <p class="description">Brief description of their thesis or project work.</p>
+      </div>
+      <div class="team-member">
+        <img src="shelly.jpg" alt="M.Tech Student 3">
+        <h3>Student 3</h3>
+        <p class="role">Specialization</p>
+        <p class="description">Brief description of their thesis or project work.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h3>ADDRESS</h3>
+            <p>PG Block behind Academic Block <br>
+                Indian Institute of Technology<br>
+                Ponda Goa – 403401</p>
         </div>
-        <div class="sub-container jrf-cont" id = "jrf">
-            <div class="student-info">JRF Student 1: Details</div>
-            <div class="student-info">JRF Student 2: Details</div>
+        <div class="footer-logo">
+            <img src="iitGOALOGO.png" alt="Institute Logo">
         </div>
-        <div class="sub-container mtech-cont" id ="mtech">
-            <div class="student-info">MTech Student 1: Details</div>
-            <div class="student-info">MTech Student 2: Details</div>
-        </div>
-        <div class="sub-container btech-cont" id = "btech">
-            <div class="student-info">BTech Student 1: Details</div>
-            <div class="student-info">BTech Student 2: Details</div>
+        <div class="footer-contact">
+            <p><b>CONTACT</b></p>
+            <p><i class="fa fa-phone"></i>PHONE :  +91 80 22932417</p>
+            <p><i class="fa fa-envelope"></i> <a href="mailto:office.aero@iisc.ac.in">E-MAIL : shakthi@iitgoa.ac.in</a></p>
+            
         </div>
     </div>
-</section>
-<footer id="footer">
-    <div class="footer-section">
-        <div class="footer-column">
-            <h3>GET IN TOUCH</h3>
-            <p>Plasma Research Lab<br>PG block, GEC Campus<br>Indian Institute Of Technology Goa<br>Ponda-403404</p>
-        </div>
-        <div class="footer-column">
-            <h3>LAB RULES</h3>
-            <ul>
-                <li><a href="#">1. Rule 1</a></li>
-                <li><a href="#">2. Rule 2</a></li>
-                <li><a href="#">3. Rule 3</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>CONTACT</h3>
-            <ul>
-                <li><a href="#">Email: shakthi@iitgoa.ac.in</a></li>
-                <li><a href="#">Ph: 8861663357</a></li>
-                <li><a href="#">LinkedIn</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>OPENING HOURS</h3>
-            <p>Mon - Fri: 8am - 5pm<br>Saturday: 9am - 7pm<br>Sunday: Closed</p>
-        </div>
-    </div>
+    <hr>
     <div class="footer-bottom">
-        <p>Copyright &copy; 2024 Aditi Jindal and Sanskriti Pal. All rights reserved.</p>
+        <p>Copyright &copy; 2024 Aditi Jindal and Sanskriti Pal. All rights reserved.</a></p>
     </div>
 </footer>
-    <script src="fns.js"></script>
 </body>
 </html>
