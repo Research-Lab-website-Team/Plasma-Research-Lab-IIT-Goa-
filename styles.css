@@ -94,6 +94,9 @@ html {
     top: 0;
     font-size: 30px;
 }
+.spanclass{
+    font-weight: bolder;
+}
 .scroll-content {
     flex-grow: 1;
     overflow-y: auto;
