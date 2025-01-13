@@ -29,35 +29,114 @@ html {
     /* display: flex;  */
     margin-bottom: 10px;
 }
-
+.slideshow-container {
+    position: relative;
+    max-width: 80%; /* Use percentage for responsiveness */
+    height: 50vw; /* Set height relative to the width of the viewport */
+    max-height: 500px; /* Optional: Restrict maximum height */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #000; /* Background to handle empty space */
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container proportionally */
+    border-radius: 10px;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    border-radius: 50%;
+    user-select: none;
+    z-index: 2;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .dots-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #717171;
+  }
+  
+  /* Fade animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+  }
+  
+  /* Responsive adjustments using media queries */
+  @media (max-width: 768px) {
+    .slideshow-container {
+      max-width: 90%; /* Wider container for smaller screens */
+      height: 60vw; /* Adjust height for smaller screens */
+    }
+  
+    .prev, .next {
+      padding: 8px; /* Smaller navigation buttons */
+    }
+  
+    .dot {
+      height: 10px;
+      width: 10px; /* Smaller dots */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slideshow-container {
+      max-width: 100%; /* Full width on very small screens */
+      height: 70vw; /* Adjust height further */
+    }
+  
+    .prev, .next {
+      padding: 6px; /* Even smaller navigation buttons */
+    }
+  
+    .dot {
+      height: 8px;
+      width: 8px; /* Smaller dots for very small screens */
+    }
+  }
  
-.plasma-carousel {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    width: 75%; /* Cover 75% of the screen width */
-    height: 400px; /* Adjust the height as needed */
-    margin: auto; /* Center horizontally in case Flexbox isn't applied directly */
-    position: relative; /* Position it relative to the screen */
-    top: 10px; /* Move down to the vertical center */
-    border-radius: 10px; /* Optional: Rounded corners */
-    overflow: hidden; /* Hide any overflow from child elements */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better appearance */
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.1); /* Optional: Semi-transparent background */
-}
-.carousel-images {
-    display: flex;
-    width: 100%;
-    transition: transform 0.5s ease-in-out; /* Smooth scroll effect */
-}
 
-.carousel-images img {
-    width: 100%;
-    flex-shrink: 0; /* Prevent images from shrinking */
-    height: 400px; /* Match carousel height */
-    object-fit: cover; /* Ensure images fit nicely */
-}
 
 
 .container {
