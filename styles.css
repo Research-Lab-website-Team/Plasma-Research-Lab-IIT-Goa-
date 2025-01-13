@@ -29,6 +29,17 @@ html {
     /* display: flex;  */
     margin-bottom: 10px;
 }
+.outerbox{
+  max-width: 80%;
+  height: 50vw; /* Set height relative to the width of the viewport */
+  max-height: 500px;
+  background-color: black;
+  border-radius: 10px;
+  z-index: -2;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
 .slideshow-container {
     position: relative;
     max-width: 80%; /* Use percentage for responsiveness */
