@@ -66,13 +66,27 @@
     </div>
 
     <!-- Plasma Image Carousel -->
-    <div class="plasma-carousel">
-        <div class="carousel-images" id="carousel-images">
-            <img src="plasma.jpg" alt="Plasma 1" class="plasma-image">
-            <img src="plasma.jpg" alt="Plasma 2" class="plasma-image">
-            <img src="plasma.jpg" alt="Plasma 3" class="plasma-image">
-            <!-- Add more images if needed -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="IMG_2057.JPG" alt="Image 1">
         </div>
+        <div class="slide fade">
+          <img src="IMG_2208.JPG" alt="Image 2">
+        </div>
+        <div class="slide fade">
+          <img src="IMG_9365.JPG" alt="Image 3">
+        </div>
+    
+        <!-- Navigation controls -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    
+      <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div><br><br><br<br> <br<br><br><br><br<br><br><br><br<br>
 
      
