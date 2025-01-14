@@ -281,7 +281,7 @@ html {
 
 .content-box h2 {
     font-size: 2rem;
-    color: #46278a;
+    color: rgb(195, 3, 195);
     margin-bottom: 20px;
 }
 
@@ -306,6 +306,10 @@ h2{
 
     .content-box p {
         font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+      .outerbox {
+      max-width: 90%; /* Wider container for smaller screens */
+      height: 60vw; /* Adjust height for smaller screens */
     }
 }
 
