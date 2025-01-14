@@ -184,9 +184,7 @@ html {
     top: 0;
     font-size: 30px;
 }
-.spanclass{
-    font-weight: bolder;
-}
+
 .scroll-content {
     flex-grow: 1;
     overflow-y: auto;
@@ -236,22 +234,6 @@ html {
     }
 }
 
-/* Animation for sliding in */
-@keyframes slideIn {
-    from {
-        transform: translateY(20px); /* Start slightly below */
-        opacity: 0; /* Start invisible */
-    }
-    to {
-        transform: translateY(0); /* End at original position */
-        opacity: 1; /* End fully visible */
-    }
-}
-
-/* Apply the animation */
-.slide-in {
-    animation: slideIn 0.5s ease forwards; /* 0.5 seconds duration */
-}
 
 .what-we-do-section {
   max-width: 80%;
@@ -272,11 +254,16 @@ html {
 
 
 .content-box {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 40px;
+    max-width: 80%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better contrast */
+    color: #fff; /* White text for readability */
+    padding: 10px;
     border-radius: 15px;
-    text-align: center;
+    /* text-align: center; */
     max-width: 600px;
+    /* margin: auto; Center the content box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better appearance */
+    overflow: hidden;
 }
 
 .content-box h2 {
@@ -286,13 +273,10 @@ html {
 }
 
 .content-box p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.5;
-}
-h2{
-    color: #0A2F7A;
-    text-align: center;
+    font-size: 1.2rem;
+    color: white; /* Adjust to ensure readability */
+    line-height: 1.6;
+    text-align: justify;
 }
 @media (max-width: 768px) {
     .content-box {
