@@ -254,27 +254,21 @@ html {
 }
 
 .what-we-do-section {
+  max-width: 80%;
+  border-radius: 10px;
     position: relative;
-    height: 600px;
+    height: auto; /* Adjust height dynamically for content */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Ensures the pseudo-element stays inside the container */
-}
-
-.what-we-do-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('AboutUsSection.jpg');
+    padding: 20px; /* Add padding for smaller screens */
+    overflow: hidden;
+    background-image: url('abou.jpg'); /* Ensure URL encoding for spaces */
     background-size: cover;
     background-position: center;
-    filter: blur(3px); /* Adjust the blur level */
-    z-index: -1; /* Place the background behind the content */
+    z-index: -1;  /* Ensures the pseudo-element stays inside the container */
 }
+
 
 
 .content-box {
@@ -299,5 +293,35 @@ html {
 h2{
     color: #0A2F7A;
     text-align: center;
+}
+@media (max-width: 768px) {
+    .content-box {
+        max-width: 90%; /* Adjust to fit most of the screen */
+        padding: 20px; /* Reduce padding */
+    }
+
+    .content-box h2 {
+        font-size: 1.8rem; /* Slightly smaller heading */
+    }
+
+    .content-box p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* For Phones and Extra Small Devices */
+@media (max-width: 480px) {
+    .content-box {
+        max-width: 100%; /* Use full screen width */
+        padding: 15px; /* Reduce padding further */
+    }
+
+    .content-box h2 {
+        font-size: 1.5rem; /* Smaller heading for small screens */
+    }
+
+    .content-box p {
+        font-size: 0.9rem; /* Smaller paragraph font size */
+    }
 }
 
