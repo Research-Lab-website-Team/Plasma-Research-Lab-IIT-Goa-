@@ -18,6 +18,8 @@ html {
     padding: 0;
     height: 30vh;
     align-items: center;
+    color: #026a85;
+    font-family: 'Playfair Display', serif;
 }
 .left-content{
     text-align: center;
@@ -147,7 +149,10 @@ html {
     }
   }
  
-
+.container h2{
+    color: #026a85;
+    font-family: 'Playfair Display', serif;
+}
 
 
 .container {
