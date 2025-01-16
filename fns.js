@@ -35,3 +35,49 @@ setInterval(() => {
   changeSlide(1); // Move to the next slide
 }, 1500); // 3000 milliseconds = 3 seconds
 
+function autoScroll(elementId) {
+    const element = document.getElementById(elementId);
+    // let scrollAmount = 0;
+    let scrollStep = 1; // Scrolling step
+    const scrollSpeed = 50; // Speed of scrolling (lower = faster)
+    let autoScrollInterval;
+
+    // Function to start auto-scrolling
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(() => {
+            if (element.scrollTop + element.clientHeight >= element.scrollHeight) {
+                scrollAmount = 0; // Reset scroll when at the bottom
+                // element.scrollTop = scrollAmount;
+            } else {
+                element.scrollTop += scrollStep; // Scroll down
+            }
+        }, scrollSpeed);
+    }
+
+    // Function to stop auto-scrolling
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+    }
+
+    // Start auto-scrolling by default
+    startAutoScroll();
+
+    // Pause auto-scrolling when the user interacts with the content
+    element.addEventListener("mouseenter", stopAutoScroll);
+    element.addEventListener("mouseleave", startAutoScroll);
+
+    // Allow manual scrolling
+    element.addEventListener("wheel", stopAutoScroll);
+}
+
+// Apply auto-scroll to each box
+autoScroll('publications');
+autoScroll('projects');
+autoScroll('openings');
+
+categories.forEach((category, index) => {
+    category.addEventListener('mouseover', () => {
+        containers.forEach(cont => cont.style.display = 'none');
+        containers[index].style.display = 'flex';
+    });
+});
