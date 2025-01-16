@@ -110,9 +110,7 @@ html {
     animation-name: fade;
     animation-duration: 1.5s;
   }
-  .spanclass{
-    font-weight: bolder;
-  }
+ 
   @keyframes fade {
     from { opacity: 0.4; }
     to { opacity: 1; }
@@ -134,7 +132,7 @@ html {
       width: 10px; /* Smaller dots */
     }
   }
-  
+ 
   @media (max-width: 480px) {
     .slideshow-container {
       max-width: 100%; /* Full width on very small screens */
@@ -155,7 +153,9 @@ html {
     color: #026a85;
     font-family: 'Playfair Display', serif;
 }
-
+  .spanclass{
+    font-weight: bolder;
+  }
 
 .container {
     display: flex;
