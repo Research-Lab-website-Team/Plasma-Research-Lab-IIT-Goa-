@@ -110,7 +110,9 @@ html {
     animation-name: fade;
     animation-duration: 1.5s;
   }
-  
+  .spanclass{
+    font-weight: bolder;
+  }
   @keyframes fade {
     from { opacity: 0.4; }
     to { opacity: 1; }
