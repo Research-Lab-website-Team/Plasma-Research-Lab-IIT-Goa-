@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +9,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 .projects-section {
     text-align: center;
     padding: 50px 0;
@@ -16,7 +16,7 @@ html {
 
 .projects-section h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjusted for smaller screens */
     margin-bottom: 30px;
     color: #026a85;
 }
@@ -34,7 +34,8 @@ html {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
+    width: 100%; /* Adjust for smaller screens */
+    max-width: 300px; /* Ensure cards are responsive */
 }
 
 .card p {
@@ -48,41 +49,42 @@ html {
     transform: scale(1.05);
 }
 
-
 .container {
     text-align: center;
     margin-top: 100px;
-  }
-  
-  .trigger-link {
-    font-size: 1.2rem;
+}
+
+.trigger-link {
+    font-size: 1rem;
     text-decoration: none;
     color: #33a0b3;
     cursor: pointer;
-  }
-  
-  .trigger-link:hover {
+}
+
+.trigger-link:hover {
     text-decoration: underline;
-  }
-  
-  /* Hidden Box Styling */
-  .content-box {
+}
+
+/* Hidden Box Styling */
+.content-box {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    max-width: 500px;
+    width: 80%; /* Make the box responsive for smaller screens */
+    max-width: 400px;
+    max-height: 70%; /* Prevent the box from taking too much space */
+    overflow-y: auto; /* Enable scrolling for longer content */
     background: linear-gradient(135deg, #026a85, #008EB0); /* Gradient Background */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.2); /* 3D Effect */
     border-radius: 12px;
     padding: 20px;
     z-index: 1000;
     animation: expandBox 0.3s ease-out;
-  }
-  
-  @keyframes expandBox {
+}
+
+@keyframes expandBox {
     from {
         transform: translate(-50%, -50%) scale(0.8);
         opacity: 0;
@@ -91,18 +93,18 @@ html {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
-  }
-  
-  .box-body {
+}
+
+.box-body {
     font-size: 1rem;
     color: white;
     line-height: 1.6;
     text-align: center;
     font-weight: bold;
-  }
-  
-  /* Overlay Background */
-  .overlay {
+}
+
+/* Overlay Background */
+.overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -111,4 +113,42 @@ html {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
-  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .content-box {
+        width: 90%; /* Reduce width on smaller screens */
+        max-width: 350px;
+        max-height: 75%; /* Adjust for mobile devices */
+    }
+
+    .projects-section h1 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .card {
+        max-width: 90%; /* Allow cards to shrink on smaller devices */
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-box {
+        width: 95%; /* Further reduce width on very small screens */
+        max-height: 80%; /* More height for scrolling content */
+    }
+
+    .projects-section h1 {
+        font-size: 1.5rem; /* Adjust heading size for very small screens */
+    }
+
+    .card {
+        max-width: 100%; /* Cards take full width */
+        margin: 0 auto;
+    }
+
+    .trigger-link {
+        font-size: 0.9rem; /* Slightly smaller links */
+    }
+}
