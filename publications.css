@@ -3,7 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 200vh; /* Extend height for testing scrolling */
+    min-height: 100vh; 
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -43,6 +44,7 @@ body {
     justify-content: left;
     padding-left: 120px;
 }
+ 
 .newsecyear{
     padding-left: 10px;
 }
