@@ -31,18 +31,18 @@ body {
     text-align: center; /* Center the text */
     height: 100%; /* Make sure it takes the full height */
     transition: transform 0.6s ease-in-out;
+    padding: 10px;
 }
 
 .service h2 {
     font-size: 30px;
-    color: #026a85;
+    color: #145aa5;
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 10px;
     margin-top: 20px;
     
 }
-
-.service p {
+.service img {
     font-size: 14px;
     color: #555;
     text-align: justify;
@@ -51,8 +51,24 @@ body {
     display: flex; /* Enable flexbox for the paragraph */
     justify-content: center; /* Center text horizontally */
     align-items: center;
-    margin: 0; /* Remove default margin */
+    margin: 10px; /* Remove default margin */
     padding: 10px; /* Allows the paragraph to grow and balance space */
+}
+strong{
+    display: inline;
+}
+.service p {
+    font-size: 14px;
+    color: #555;
+    text-align: justify;
+    margin-top: 5px;
+    flex-grow: 1;
+    text-align: justify;
+    justify-content: center; 
+    align-items: center;
+    margin: 0; 
+    padding: 30px; 
+    /* display: block; */
 }
 
 /* Tablet Responsive (768px to 1024px) */
